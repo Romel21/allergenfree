@@ -9,7 +9,7 @@ import 'screens/main_screen.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
+        // statusBarColor: Colors.transparent,
         systemNavigationBarDividerColor: Colors.white,
         systemNavigationBarColor: Colors.white,
         systemNavigationBarIconBrightness: Brightness.dark),
@@ -30,8 +30,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: const MainScreen(),
+        initialRoute: MainScreen.routeName,
         routes: {
-          MainScreen.routeName: (context) => const MainScreen(),
+          MainScreen.routeName: (_) => const MainScreen(),
           LoginScreen.routeName: (context) => const LoginScreen(),
           CreateAccountScreen.routeName: (context) => const CreateAccountScreen(),
           HomeScreen.routeName: (context) => const HomeScreen(),
